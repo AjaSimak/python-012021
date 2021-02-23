@@ -7,6 +7,7 @@ volnePokoje = {
 hour = int(input("V kolik hodin chcete rezervovat místnost? "))
 if hour in volnePokoje:
     room = volnePokoje.get(hour)
-    print(f"Jsou dostupné tyto místnosti {room}.")
+    pocetMistnosti=len(room)
+    print(f"Jsou dostupné tyto místnosti {room}, tedy celkem {pocetMistnosti}.")
 else:
     print ("Není volná žádná místnost.")

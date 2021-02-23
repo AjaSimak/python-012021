@@ -45,11 +45,14 @@ morseCode = {
     "(": "-.--.",
     ")": "-.--.-"
 }
-letters=str(input("Zadej malá písmena bez diakretiky a mezer: "))
+letters=str(input("Zadej jedno malé písmeno bez diakretiky: "))
 if letters in morseCode:
-    znaky = morseCode.get(letters)
-    print(f"Toto je text v morseovce: {znaky}", end=" ")
+    print(f"Toto písmeno je v morseovce {morseCode[letters]}.")
 else:
     print("Toto písmeno není v morseovce.")
 
-#nefunguje to, protože víc písmen za sebou#
+letters=str(input("Zadej malá písmena bez diakretiky a mezer: "))
+for letters in morseCode:
+    znaky = morseCode.get(letters)
+    if letters in morseCode:
+        print(f"Slovo v morseovce zní: {znaky}")

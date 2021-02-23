@@ -15,7 +15,7 @@ prodeje2020 = {
 book = input("Zadejte název knihy: ")
 sales = prodeje2020.get(book)
 salesLastYear = prodeje2019.get(book)
-prodeje2019["Past"] = 0
+
 if book in prodeje2020:
     print(f"Prodej v roce 2020 byl {sales}.")
 else:
@@ -24,4 +24,3 @@ if book in prodeje2019:
     print (f"Prodej v roce 2019 byl {salesLastYear}.")
 else:
     print("Kniha se v roce 2019 neprodávala.")
-print(f"Prodej za oba roky byl {sales} + {salesLastYear}.")

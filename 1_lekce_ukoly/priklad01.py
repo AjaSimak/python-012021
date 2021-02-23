@@ -7,10 +7,7 @@ baliky = {
 }
 number = input("Zadej číslo balíku: ")
 kuryr = baliky.get(number)
-if number in baliky:
-    if baliky in kuryr(True):
-        print(f"Balík byl předán kurýrovi.")
-    else:
-        print(f"Balík zatím nebyl předán kurýrovi.")
+if kuryr==False:
+    print("Balík nepředán kurýrovi.")
 else:
-    print(f"Číslo balíku není na seznamu.")
+    print("Balík předán kurýrovi.")
