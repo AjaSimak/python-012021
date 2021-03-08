@@ -1,53 +1,48 @@
 def zakazky(odvetvi, obrat, zeme, konference=False, newsletter=False):
-  if odvetvi == odvetvi["automotiv"]:
-    body = 3
-  elif odvetvi == odvetvi["retail"]:
-    body = 2
+  if odvetvi == "automotiv":
+    body1 = 3
+  elif odvetvi == "retail":
+    body1= 2
   else:
-    body = 0
-  return body
-
-odvetvi = input("Ve kterém odvětví podniká firma: ")
-
+    body1 = 0
   if obrat < 10:
-    body = 0
+    body2 = 0
   elif obrat > 1000:
-    body = 1
+    body2 = 1
   else:
-    body = 3
-  return body
-
-obrat = input("Jaký je obrat firmy v mil. EUR: ")
-
+    body2 = 3
   if zeme == "Česko":
-    body = 2
+    body3 = 2
   elif zeme == "Slovensko":
-    body = 2
-  elif zeme == "Německo, Francie":
-    body = 1
+    body3 = 2
+  elif zeme == "Německo":
+    body3 = 1
+  elif zeme == "Francie":
+    body3 = 1
   else:
-    body = 0
-  return body
+    body3 = 0
+  if konference == "ano":
+    body4 = 1
+  else:
+    body4 = 0
+  if newsletter == "ano":
+    body5 = 1
+  else:
+    body5 = 0
 
+  return body1 + body2 + body3 + body4 + body5
+
+odvetvi = input("Jaké odvětví? ")
+obrat = input("Jaký je obrat firmy v mil. EUR: ")
+obrat = int(obrat)
 zeme = input("Z jaké země firma pochází: ")
+konference = input("Byl zákazník na konferenci: (ano/ne)")
+newsletter = input("Odebírá zákazník newsletter: (ano/ne)")
+print(zakazky(odvetvi, obrat, zeme, konference, newsletter))
 
-  if konference == True:
-    body = 1
-  return body
-konference = input("Byl zákazník na konferenci: (True/False)")
-
-  if newsletter == True:
-    body = 1
-  return body
-newsletter = input("Odebírá zákazník newsletter: (True/False)")
-
-total += body
-print(zakazky(body))
-
-  if total < 5:
-    print(f"Šance je malá.")
-  elif total > 8:
-    print(f"Šance je vysoká.")
-  else:
-    print (f"Šance je střední.")
-
+if zakazky(odvetvi, obrat, zeme, konference, newsletter) <= 5:
+  print(f"Šance je malá.")
+elif zakazky(odvetvi, obrat, zeme, konference, newsletter) > 8:
+  print(f"Šance je vysoká.")
+else:
+  print(f"Šance je střední.")
