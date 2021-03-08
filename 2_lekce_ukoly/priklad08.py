@@ -1,5 +1,4 @@
 def phoneNumber(delka):
-  #delka = int(delka)#
   if len(delka) == 13:
     if "+420" in delka:
       return True
@@ -13,9 +12,10 @@ def phoneNumber(delka):
 delka = input("Zadej telefonní číslo: ")
 print(phoneNumber(delka))
 
-def sms(text):
-  pocet_sms = len(text) // 180 + 1
-  cena = 3
-  return f"Celkem zaplatíš {pocet_sms * cena} Kč."
-text = input("Zadej text zprávy: ")
-print(sms(text))
+if phoneNumber(delka) == True:
+  def sms(text):
+    pocet_sms = len(text) // 180 + 1
+    cena = 3
+    return f"Celkem zaplatíš {pocet_sms * cena} Kč."
+  text = input("Zadej text zprávy: ")
+  print(sms(text))
