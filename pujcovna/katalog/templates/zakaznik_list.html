@@ -1,0 +1,22 @@
+
+<h2>Seznam zákazníků</h2>
+<p>Zde vidíte seznam zákazníků</p>
+<ul>
+
+<table>
+  <tr>
+    <td>jméno: </td>
+    <td>příjmení: </td>
+    <td>číslo řidičského průkazu </td>
+    <td>datum narození: </td>
+  </tr>
+    {% for zakaznik in object_list %}
+  <tr>
+    <td>{{zakaznik.jmeno}} </td>
+    <td>{{zakaznik.prijmeni}}</td>
+    <td>{{zakaznik.ridicak}} </td>
+    <td>{{zakaznik.datum_narozeni}} </td>
+  </tr>
+    {% endfor %}
+</table>
+</ul>

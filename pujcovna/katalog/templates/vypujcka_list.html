@@ -1,0 +1,8 @@
+
+<h2>Seznam výpůjček</h2>
+<p>Zde vidíte seznam výpůjček</p>
+<ul>
+    {% for vypujcka in object_list %}
+    <li> Auto bylo půjčeno dne: {{ vypujcka.datum_zacatek_vypujcky }}, vráceno dne: {{ vypujcka.datum_konec_vypujcky }}, cena celkem: {{ vypujcka.cena_vypujcky }} Kč.</li>
+    {% endfor %}
+</ul>

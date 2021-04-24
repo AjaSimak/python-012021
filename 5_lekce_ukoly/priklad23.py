@@ -16,7 +16,7 @@ print(vakcinace[(vakcinace["date"] == "2021-03-10") & (vakcinace["total_vaccinat
 print(vakcinace[(vakcinace["date"] == "2021-03-10") & (vakcinace["total_vaccinations"] > 100_000) | (vakcinace["total_vaccinations"] < 100)][["country", "total_vaccinations"]])
 
 # dobrovolné úkoly
-print(vakcinace[(vakcinace["date"] == "2021-03-10") | (vakcinace["date"] == "2021-03-11") & (vakcinace["country"].isin(["United Kingdom", "Finland", "Italy"]))])
+print(vakcinace[(vakcinace["date"] == "2021-03-10") | (vakcinace["date"] == "2021-03-11") & (vakcinace["country"].isin([["United Kingdom", "Finland", "Italy"]]))])
 #proč u UK, Finska a Itálie to nevypiuje pouze tyto země a pro Japonsko níže to funguje?
 
 print(vakcinace[(vakcinace["date"] >= "2021-03-03") & (vakcinace["date"] <= "2021-03-09") & (vakcinace["country"] == "Japan")])

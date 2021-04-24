@@ -1,0 +1,23 @@
+
+<h2>Seznam aut</h2>
+<p>Zde vidíte seznam aut</p>
+<ul>
+
+<table>
+  <tr>
+    <td>registrační značka: </td>
+    <td>značka/typ auta: </td>
+    <td>počet najetých km: </td>
+    <td>poslední technická kontrola: </td>
+  </tr>
+    {% for auto in object_list %}
+  <tr>
+    <td>{{auto.registracni_znacka}} </td>
+    <td>{{auto.znacka_typ_auta}}</td>
+    <td>{{auto.pocet_najetych_km}} </td>
+    <td>{{auto.datum_posledni_technicke}} </td>
+  </tr>
+    {% endfor %}
+</table>
+
+</ul>

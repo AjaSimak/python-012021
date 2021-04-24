@@ -9,24 +9,13 @@ jmeno = {}
 def ohodnot_studenta(jmeno):
   for radek in vysledky:
     radek.pop("Jméno")
-    print(sum(radek.values()))
+    prumer_znamek = int(sum(radek.values())/len(radek))
 
-if radek["Jméno"] == jmeno:
-      znamky = radek.values()
-      soucet_znamek = int(sum(znamky))
-      return soucet_znamek // len(radek[1:4])
+      if prumer_znamek < 1.5:
+        return "Prospěl s vyznamenáním"
+      elif radek.values() == 5:
+        return "Neprospěl"
+      else:
+        return "Prospěl"
 
-if prumer_znamek < 1.5 and znamky < 3:
-     return f"Prospěl s vyznamenáním"
-    elif predmety < 5:
-  return f"Neprospěl"
-  else:
-  return f"Prospěl"
-
-jmeno = input("Zadej jméno studenta: ")
-print(ohodnot_studenta(jmeno))
-
-# cyklus by měl jít po jednotlivých řádcích. dle jména studenta
-# poté sečíst předměty
-# https://www.geeksforgeeks.org/python-program-to-find-the-sum-of-all-items-in-a-dictionary/
-# https://www.kite.com/python/answers/how-to-sum-the-values-in-a-dictionary-in-python
+print(ohodnot_studenta())

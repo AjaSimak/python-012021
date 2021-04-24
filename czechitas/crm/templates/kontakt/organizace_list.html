@@ -1,0 +1,8 @@
+
+<h2>Seznam organizací</h2>
+<p>Zde vidíte organizace</p>
+<ul>
+    {% for organizace in object_list %}
+    <li>{{ organizace.jmeno }}, {{ organizace.mesto }}</li>
+    {% endfor %}
+</ul>

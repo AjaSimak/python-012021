@@ -14,3 +14,5 @@ ax.set_title("Velikonoce")
 ax.legend(loc=2)
 
 plt.show()
+
+#https://coobas.gitlab.io/python-fjfi/posts/matplotlib.html
